@@ -3,11 +3,41 @@
     font-family: 'Abril Fatface', cursive;
 }
 
+.logo, .hero-img, .shadow-box img {
+    animation: animation-logo 10s linear infinite;
+}
+
+@keyframes animation-logo {
+    0% {
+        transform: rotateY(0deg) scale(1.2);
+    }
+    100% {
+        transform: rotateY(360deg) scale(.5);
+    }
+}
+
+/* .hero-bg:hover .hero-img {
+    transform: rotateY(180deg) scale(1.2);
+    z-index: 100;
+    transition: 2s ease-in;
+} */
+
 .shadow-box {
     transition: .2s ease-in;
+}
+
+img {
+    transition: 5s ease-in;
 }
 
 .shadow-box:hover {
     box-shadow: -0px 2px 10px -0px rgb(167, 163, 163);
     transition: .2s ease-in;
+}
+
+.shadow-box:hover img {
+    /* transform: scale(1.1) skewX(15deg) rotate3d(-0, 1, 2); */
+    transform: rotateY(180deg) scale(1.2);
+    z-index: 100;
+    transition: 2s ease-in;
 }
